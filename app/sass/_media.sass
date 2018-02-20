@@ -5,7 +5,81 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
+	.header-nav-open
+		display: block
+		padding: 5px 0 0 0
+		outline: none
+	.header-nav
+		margin: 0
+		padding: 0
+		width: 100%
+		height: calc(100vh - #{$hh})
+		position: fixed
+		top: $hh
+		left: 0
+		opacity: 0
+		transition: .5s
+		background-color: #fff
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+	.header-nav-item
+		list-style: none
+		text-decoration: none
+		padding-right: 0
+		font-family: "fregat", sans-serif
+		font-size: 15px
+		font-variant: small-caps
+		border-top: 1px solid $a-c
+		line-height: calc(#{$head-offset} /5)
+		height: calc(#{$head-offset} /5)
+		text-align: center
+		&:after
+			content: ""
+	.header-nav-link
+		color: $header-c
+		text-transform: uppercase
+		text-decoration: none
+	.main-section
+		margin-top: $hh
+		min-height: 50vh
+		background: url(../img/main-grd.png), url(../img/main-bg.png)
+		background-repeat: repeat-y, no-repeat
+		background-position: 70%, right center
+		
+	.main-section-bg
+		background: none
 
+	.main-section-row
+		padding: 20px 0
+	.accent-title
+		font-size: 22px
+		margin: 8px 0
+		text-align: justify
+	.accent-article
+		font-size: 19px
+		line-height: 24px
+		margin-bottom: 20px
+		text-align: justify
+	.about-program-section
+		padding-top: 20px
+		padding-bottom: 20px
+	.about-program-title
+		text-align: center
+	.centered-article
+		text-align: justify
+
+	#next-btn, #prev-btn
+		display: none
+	#viewport
+		margin: 4px 0
+	.entry-section
+		padding-top: 20px
+		padding-bottom: 20px
+	.entry-title
+		font-size: 22px
+	.entry-item
+		margin: 10px 0
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -52,4 +126,3 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
 	/**/
-

@@ -44,17 +44,256 @@ body
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
+	margin: 0
+	padding: 0
 
 .img-responsive
 	display: block
-	max-width: 100%
+	width: 100%
 	height: auto
 
 .text-center
 	text-align: center
 
-::selection
-	background-color: $accent
+.header-section
+	position: fixed
+	top: 0
+	background-color: #fff
+	z-index: 100
+.header-section-row
+	height: $hh
+
+.header-logo
+	font-family: "fregat-bold", sans-serif
+	font-size: 45px;
+	color: $header-c
+	text-transform: uppercase
+
+.header-nav
+	margin: 0
+	padding: 0
+	display: flex
+	flex-direction: row
+.header-nav-open
+	display: none
+.header-nav-item
+	list-style: none
+	text-decoration: none
+	padding-right: 2px
+	font-family: "fregat", sans-serif
+	font-size: 12px
+	line-height: 12px
+	font-variant: small-caps
+	&:after
+		content: "•"
+		padding-left: 2px
+	&:last-child
+		&:after
+				content: ''
+.header-nav-link
+	transition: 0.5s
+	color: $header-c
+	text-transform: uppercase
+	text-decoration: none
+	&:hover
+		color: $a-c
+
+.main-section
+	margin-top: $hh
+	min-height: 50vh
+	background: url(../img/main-bg.png),  url(../img/main-grd.png)
+	background-repeat: no-repeat, repeat-y
+	background-position: right center, 60% center
+	background-color: #d7eed6
+	
+.main-section-bg
+	background:  url(../img/main-grd.png)
+	background-repeat:  repeat-y
+	background-position: right 0
+
+.main-section-row
+	padding: 85px 0
+
+.accent-title
+	font-family: "fregat-bold", sans-serif
+	font-size: 28px
+	line-height: 32px
+	color: $a-c
+	text-transform: uppercase
+	margin: 14px 0
+.accent-article
+	font-family: "ptsans", sans-serif
+	font-size: 19px
+	line-height: 25px
+	color: #4e4e4e
+	margin-bottom: 66px
+.centered-article
+	text-align: center
+.but
+	width: 96%
+	border: 2px solid $a-c
+	border-radius: 2px
+	line-height: 40px
+	transition: .5s
+	font-family: "ptsans-bold", sans-serif
+	font-size: 15px
+	text-transform: uppercase
+	margin: 2%
+.but-green
+	background-color: $a-c
 	color: #fff
+	&:hover
+		background-color: transparent
+		color: $a-c
+.but-gray
+	background-color: transparent
+	color: #656565
+	border: 1px solid #707070
+	&:hover
+		border: 1px solid $a-c
+		background-color: transparent
+		color: $a-c
+
+
+
+.about-program-section
+	padding-top: 40px
+	padding-bottom: 40px
+	background-color: $a-c
+.about-program-title
+	margin: 0
+	font-family: "fregat-bold", sans-serif
+	font-size: 20px
+	color: #fff
+	text-transform: uppercase
+.about-program-for
+	font-family: "ptsans", sans-serif
+	font-size: 15px
+	color: #fff
+	span
+		display: block
+		&:before
+			content: "> "
+			font-family: "ptsans-bold", sans-serif
+
+.program-inc-section
+	padding-top: 40px
+	padding-bottom: 40px
+.program-inc-article
+	margin-top: 16px
+	margin-bottom: 0
+
+#block-for-slide
+	width: 80%
+	margin: 0 auto
+	margin-top: 100px
+
+#viewport
+	width: 100%
+	position: relative
+	overflow: hidden
+	user-select: none
+	text-align: center
+	margin: 40px 0
+
+#slidewrapper
+	position: relative
+	width: calc(100% * #{$slide-count})
+	transition: 1s
+	transition-timing-function: cubic-bezier(.67,.01,.23,1)
+
+
+#slidewrapper, #slidewrapper ul, #slidewrapper li
+	margin: 0
+	padding: 0
+
+.slide
+	width: calc(100%/#{$slide-count})
+	list-style: none
+	display: inline
+	float: left
+
+.slide-img 
+	width: 100%
+
+#prev-btn:hover
+	cursor: pointer
+#next-btn:hover
+	cursor: pointer
+
+
+#nav-btns
+	position: absolute
+	width: 100%
+	bottom: 20px
+	padding: 0
+	margin: 0
+	text-align: center
+
+.slide-nav-btn
+	position: relative
+	display: inline-block
+	list-style: none
+	width: 20px
+	height: 20px
+	background-color: #fff
+	border-radius: 50%
+	margin: 3px
+.slide-nav-btn:hover
+	cursor: pointer
+
+.program-inc-item
+	font-family: "ptsans", sans-serif
+	font-size: 15px
+	color: #666
+	display: block
+	padding-top: 7px
+	padding-bottom: 7px
+	text-align: justify
+	&:before
+		content: " "
+		display: inline-block
+		width: 19px
+		height: 16px
+		margin-right: 7px 
+		background-image: url(../img/done.png)
+		background-repeat: no-repeat
+.program-inc-footer
+	font-family: "ptsans", sans-serif
+	font-size: 15px
+	color: #a2a2a2
+	text-align: center
+	margin: 30px 0 0 0
+
+.entry-section
+	padding-top: 58px
+	padding-bottom: 58px
+	background-color: #ddffcc
+.entry-title
+	font-family: "fregat-bold", sans-serif
+	font-size: 24px
+	line-height: 24px
+	text-transform: uppercase
+	color: #707070
+	margin: 0
+	text-align: center
+.entry-descr
+	font-family: "ptsans", sans-serif
+	font-size: 17px
+	line-height: 17px
+	color: #a2a2a2
+	text-align: center
+	margin: 25px 0 14px 0
+.entry-item
+	margin: 45px 0
+	text-align: center
+	color: #656565
+	font-family: "ptsans", sans-serif
+	h4
+		margin: 0 0 10px 0
+		font-size: 20px
+	span
+		display: block
+		font-size: 16px
 
 @import "media" // Всегда в конце
